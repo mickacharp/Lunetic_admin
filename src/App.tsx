@@ -12,6 +12,8 @@ import { ModelList } from "./ModelList";
 import { OpticianList } from "./OpticianList";
 import { NewsList } from "./NewsList";
 import { OpeningHourList } from "./OpeningHourList";
+import { CollectionList } from "./CollectionList";
+import { ColorList } from "./ColorList";
 import AddressList from "./AddressList";
 import { AddressEdit } from "./AddressEdit";
 import { AddressCreate } from "./AddressCreate";
@@ -35,6 +37,8 @@ const App = () => (
     <Resource name="opticians" list={OpticianList} edit={EditGuesser} />
     <Resource name="news" list={NewsList} edit={EditGuesser} />
     <Resource name="openinghours" list={OpeningHourList} edit={EditGuesser} />
+    <Resource name="collections" list={CollectionList} edit={EditGuesser} />
+    <Resource name="colors" list={ColorList} edit={EditGuesser} />
     {/* <Resource
       name="addresses"
       list={AddressList}
