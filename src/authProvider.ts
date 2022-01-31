@@ -8,7 +8,7 @@ type IUserInfo = {
 
 const authProvider: AuthProvider = {
   login: (props) => {
-    const request = new Request('http://localhost:8000/api/login', {
+    const request = new Request('http://localhost:4000/api/login', {
       method: 'POST',
       body: JSON.stringify({ email: props.username, password: props.password }),
       headers: new Headers({ 'Content-Type': 'application/json' }),
