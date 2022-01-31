@@ -13,6 +13,10 @@ import { OpticianList } from "./OpticianList";
 import { OrderList } from "./OrderList";
 import { TempleList } from "./TempleList";
 import { WishlistList } from "./WishlistList";
+import { NewsList } from "./NewsList";
+import { OpeningHourList } from "./OpeningHourList";
+import { CollectionList } from "./CollectionList";
+import { ColorList } from "./ColorList";
 import AddressList from "./AddressList";
 import { AddressEdit } from "./AddressEdit";
 import { AddressCreate } from "./AddressCreate";
@@ -37,6 +41,10 @@ const App = () => (
     <Resource name="orders" list={OrderList} edit={EditGuesser} />
     <Resource name="temples" list={TempleList} edit={EditGuesser} />
     <Resource name="wishlists" list={WishlistList} edit={EditGuesser} />
+    <Resource name="news" list={NewsList} edit={EditGuesser} />
+    <Resource name="openinghours" list={OpeningHourList} edit={EditGuesser} />
+    <Resource name="collections" list={CollectionList} edit={EditGuesser} />
+    <Resource name="colors" list={ColorList} edit={EditGuesser} />
     {/* <Resource
       name="addresses"
       list={AddressList}
