@@ -10,6 +10,8 @@ import simpleRestProvider from "ra-data-simple-rest";
 import authProvider from "./authProvider";
 import { ModelList } from "./ModelList";
 import { OpticianList } from "./OpticianList";
+import { CollectionList } from "./CollectionList";
+import { ColorList } from "./ColorList";
 import AddressList from "./AddressList";
 import { AddressEdit } from "./AddressEdit";
 import { AddressCreate } from "./AddressCreate";
@@ -31,6 +33,8 @@ const App = () => (
   <Admin authProvider={authProvider} dataProvider={dataProvider}>
     <Resource name="models" list={ModelList} edit={EditGuesser} />
     <Resource name="opticians" list={OpticianList} edit={EditGuesser} />
+    <Resource name="collections" list={CollectionList} edit={EditGuesser} />
+    <Resource name="colors" list={ColorList} edit={EditGuesser} />
     {/* <Resource
       name="addresses"
       list={AddressList}
