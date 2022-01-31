@@ -9,8 +9,8 @@ import {
   NumberField,
   Record,
   TextField,
-} from 'react-admin';
-import BooleanNumField from './BooleanNumField.jsx';
+} from "react-admin";
+import BooleanNumField from "./BooleanNumField.jsx";
 
 type recordType = {
   admin: boolean;

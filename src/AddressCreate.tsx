@@ -10,14 +10,14 @@ import {
   maxLength,
   ReferenceInput,
   SelectInput,
-} from 'react-admin';
-import { PostEditActions } from './PostEditActions';
+} from "react-admin";
+import { PostEditActions } from "./PostEditActions";
 
 const validateCity: Validator[] = [required(), minLength(2), maxLength(200)];
 const validateAddress: Validator[] = [required(), minLength(2), maxLength(255)];
 const validatePostalCode: Validator[] = [
   required(),
-  regex(/^\d{5}$/, 'Must be a valid Zip Code'),
+  regex(/^\d{5}$/, "Must be a valid Zip Code"),
 ];
 
 export default interface IUser {

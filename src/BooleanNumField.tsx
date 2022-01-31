@@ -1,6 +1,6 @@
-import * as React from 'react';
-import FalseIcon from '@material-ui/icons/Clear';
-import TrueIcon from '@material-ui/icons/Done';
+import * as React from "react";
+import FalseIcon from "@material-ui/icons/Clear";
+import TrueIcon from "@material-ui/icons/Done";
 
 type Dict = {
   [key: string]: string;
@@ -14,7 +14,7 @@ const BooleanNumField: React.FC<BooleanNumFieldProps> = ({
   record = {},
   source,
 }) => {
-  let trueOrFalse = record[source] == '1';
+  let trueOrFalse = record[source] == "1";
   return <span>{trueOrFalse ? <TrueIcon /> : <FalseIcon />}</span>;
 };
 
