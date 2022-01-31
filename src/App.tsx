@@ -7,9 +7,12 @@ import {
   ListGuesser,
 } from "react-admin";
 import simpleRestProvider from "ra-data-simple-rest";
-import authProvider from "../../Lunetic_admin-old/src/authProvider";
+import authProvider from "./authProvider";
 import { ModelList } from "./ModelList";
 import { OpticianList } from "./OpticianList";
+import AddressList from "./AddressList";
+import { AddressEdit } from "./AddressEdit";
+import { AddressCreate } from "./AddressCreate";
 
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
