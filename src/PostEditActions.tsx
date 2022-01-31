@@ -1,6 +1,6 @@
-import ChevronLeft from '@material-ui/icons/ChevronLeft';
-import React from 'react';
-import { ListButton, ShowButton, TopToolbar } from 'react-admin';
+import ChevronLeft from "@material-ui/icons/ChevronLeft";
+import React from "react";
+import { ListButton, ShowButton, TopToolbar } from "react-admin";
 
 interface PostEditActions {
   basePath?: string;

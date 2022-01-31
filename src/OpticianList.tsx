@@ -17,7 +17,7 @@ export const OpticianList = (props: ListProps) => (
       <TextField source="company" />
       <TextField source="address" />
       <TextField source="other_address" />
-      <DateField source="postal_code" />
+      <NumberField source="postal_code" />
       <TextField source="city" />
       <EmailField source="email" />
       <TextField source="mobile_phone" />

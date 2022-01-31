@@ -31,12 +31,12 @@ const App = () => (
   <Admin authProvider={authProvider} dataProvider={dataProvider}>
     <Resource name="models" list={ModelList} edit={EditGuesser} />
     <Resource name="opticians" list={OpticianList} edit={EditGuesser} />
-    <Resource
+    {/* <Resource
       name="addresses"
       list={AddressList}
       edit={AddressEdit}
       create={AddressCreate}
-    />
+    /> */}
   </Admin>
 );
 
