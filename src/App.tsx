@@ -1,11 +1,4 @@
-import * as React from "react";
-import {
-  Admin,
-  Resource,
-  fetchUtils,
-  EditGuesser,
-  ListGuesser,
-} from "react-admin";
+import { Admin, Resource, fetchUtils, EditGuesser } from "react-admin";
 import simpleRestProvider from "ra-data-simple-rest";
 import authProvider from "./authProvider";
 import { ModelList } from "./ModelList";
@@ -17,9 +10,8 @@ import { NewsList } from "./NewsList";
 import { OpeningHourList } from "./OpeningHourList";
 import { CollectionList } from "./CollectionList";
 import { ColorList } from "./ColorList";
-import AddressList from "./AddressList";
-import { AddressEdit } from "./AddressEdit";
-import { AddressCreate } from "./AddressCreate";
+import { OpticianCreate } from "./OpticianCreate";
+import { OpticianEdit } from "./OpticianEdit";
 
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
@@ -37,7 +29,12 @@ const dataProvider = simpleRestProvider(
 const App = () => (
   <Admin authProvider={authProvider} dataProvider={dataProvider}>
     <Resource name="models" list={ModelList} edit={EditGuesser} />
-    <Resource name="opticians" list={OpticianList} edit={EditGuesser} />
+    <Resource
+      name="opticians"
+      list={OpticianList}
+      edit={OpticianEdit}
+      create={OpticianCreate}
+    />
     <Resource name="orders" list={OrderList} edit={EditGuesser} />
     <Resource name="temples" list={TempleList} edit={EditGuesser} />
     <Resource name="wishlists" list={WishlistList} edit={EditGuesser} />
@@ -45,12 +42,6 @@ const App = () => (
     <Resource name="openinghours" list={OpeningHourList} edit={EditGuesser} />
     <Resource name="collections" list={CollectionList} edit={EditGuesser} />
     <Resource name="colors" list={ColorList} edit={EditGuesser} />
-    {/* <Resource
-      name="addresses"
-      list={AddressList}
-      edit={AddressEdit}
-      create={AddressCreate}
-    /> */}
   </Admin>
 );
 
