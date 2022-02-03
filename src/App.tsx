@@ -14,6 +14,8 @@ import { NewsList } from "./NewsList";
 import { NewsEdit } from "./NewsEdit";
 import { NewsCreate } from "./NewsCreate";
 import { OpeningHourList } from "./OpeningHourList";
+import { OpeningHourEdit } from "./OpeningHourEdit";
+import { OpeningHourCreate } from "./OpeningHourCreate";
 import { CollectionList } from "./CollectionList";
 import { ColorList } from "./ColorList";
 
@@ -48,9 +50,15 @@ const App = () => (
     <Resource name="temples" list={TempleList} edit={EditGuesser} />
     <Resource name="wishlists" list={WishlistList} edit={EditGuesser} />
     <Resource name="news" list={NewsList} edit={NewsEdit} create={NewsCreate} />
-    <Resource name="openinghours" list={OpeningHourList} edit={EditGuesser} />
+    <Resource
+      name="openinghours"
+      list={OpeningHourList}
+      edit={OpeningHourEdit}
+      create={OpeningHourCreate}
+    />
     <Resource name="collections" list={CollectionList} edit={EditGuesser} />
     <Resource name="colors" list={ColorList} edit={EditGuesser} />
+    <Resource name="days" />
   </Admin>
 );
 
