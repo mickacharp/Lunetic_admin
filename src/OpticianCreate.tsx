@@ -59,8 +59,8 @@ const validateAdmin: Validator[] = [
 
 export const OpticianCreate = (props: ListProps) => (
   <Create
-    title="Rajouter un opticien" // Rajoute un titre à la page
-    actions={<PostEditActions />} // Rajoute des boutons personnalisés dans l'écran d'ajout
+    title="Rajouter un opticien" // Add a title to the page
+    actions={<PostEditActions />} // Add custom buttons in adding screen
     {...props}
   >
     <SimpleForm warnWhenUnsavedChanges>

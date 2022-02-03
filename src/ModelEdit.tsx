@@ -21,16 +21,16 @@ export const ModelEdit = (props: ListProps) => (
     <SimpleForm>
       <NumberInput source="id_model" disabled />
       <TextInput source="name" />
-      <ReferenceInput source="id_collection" reference="collections" allowEmpty>
+      <ReferenceInput source="id_collection" reference="collections">
         {/* Allows to display a dropdown list that will show directly the "name" of the collections instead of their "id_collection" thanks to the optionRenderer function defined above */}
         <SelectInput optionText={optionRenderer} />
       </ReferenceInput>
+      <TextInput source="text" />
       <TextInput source="main_img" />
       <TextInput source="img_2" />
       <TextInput source="img_3" />
       <TextInput source="img_4" />
       <TextInput source="img_5" />
-      <TextInput source="text" />
     </SimpleForm>
   </Edit>
 );
