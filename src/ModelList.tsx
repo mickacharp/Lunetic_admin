@@ -21,15 +21,15 @@ export const ModelList = (props: ListProps) => (
           <TextField source="name" />
         </>
       </ReferenceField>
+      <TextField
+        source="text"
+        label="Description apparaissant sur la page Catalogue"
+      />
       <TextField source="main_img" label="Image principale" />
       <TextField source="img_2" label="Image 2" />
       <TextField source="img_3" label="Image 3" />
       <TextField source="img_4" label="Image 4" />
       <TextField source="img_5" label="Image 5" />
-      <TextField
-        source="text"
-        label="Description apparaissant sur la page Catalogue"
-      />
     </Datagrid>
   </List>
 );

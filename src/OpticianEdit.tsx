@@ -18,7 +18,7 @@ export const OpticianEdit = (props: ListProps) => (
       <TextInput source="company" />
       <TextInput source="address" />
       <TextInput source="other_address" />
-      <NumberInput source="postal_code" />
+      <TextInput source="postal_code" />
       <TextInput source="city" />
       <TextInput source="email" />
       <TextInput source="mobile_phone" />
