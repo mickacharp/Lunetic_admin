@@ -6,30 +6,31 @@ import {
   NumberField,
   TextField,
 } from "ra-ui-materialui";
+import BooleanNumField from "./BooleanNumField.jsx";
 
 export const OpticianList = (props: ListProps) => (
   <List {...props}>
     <Datagrid rowClick="edit">
       <NumberField source="id_optician" />
-      <TextField source="firstname" />
-      <TextField source="lastname" />
-      <TextField source="company" />
-      <TextField source="address" />
-      <TextField source="other_address" />
-      <NumberField source="postal_code" />
-      <TextField source="city" />
-      <EmailField source="email" />
-      <TextField source="mobile_phone" />
-      <TextField source="password" />
-      <TextField source="website" />
-      <TextField source="home_phone" />
-      <TextField source="finess_code" />
-      <TextField source="siret" />
-      <TextField source="vat_number" />
-      <TextField source="link_picture" />
-      <TextField source="lat" />
-      <TextField source="lng" />
-      <NumberField source="admin" />
+      <TextField source="firstname" label="Prénom" />
+      <TextField source="lastname" label="Nom" />
+      <TextField source="company" label="Société/Boutique" />
+      <TextField source="address" label="Adresse princ" />
+      <TextField source="other_address" label="Adresse sec" />
+      <NumberField source="postal_code" label="Code Postal" />
+      <TextField source="city" label="Ville" />
+      <EmailField source="email" label="Email" />
+      <TextField source="mobile_phone" label="Tél mobile" />
+      <TextField source="home_phone" label="Tél fixe" />
+      <TextField source="password" label="Mot de passe" />
+      <TextField source="website" label="Site web" />
+      <TextField source="finess_code" label="FINESS" />
+      <TextField source="siret" label="SIRET" />
+      <TextField source="vat_number" label="N° TVA" />
+      <TextField source="link_picture" label="Lien Photo" />
+      <TextField source="lat" label="Latitude" />
+      <TextField source="lng" label="Longitude" />
+      <BooleanNumField source="admin" />
     </Datagrid>
   </List>
 );

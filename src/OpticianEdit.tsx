@@ -10,7 +10,7 @@ import { PostEditActions } from "./PostEditActions";
 
 export const OpticianEdit = (props: ListProps) => (
   <Edit {...props} actions={<PostEditActions />}>
-    {/* Rajoute des boutons personnalisés dans l'écran d'ajout */}
+    {/* Add custom buttons in adding screen */}
     <SimpleForm>
       <NumberInput source="id_optician" disabled />
       <TextInput source="firstname" />
