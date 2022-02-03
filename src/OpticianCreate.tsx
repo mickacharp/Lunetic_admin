@@ -12,7 +12,6 @@ import {
   choices,
   email,
   number,
-  NumberInput,
 } from "react-admin";
 import { PostEditActions } from "./PostEditActions";
 
@@ -70,7 +69,7 @@ export const OpticianCreate = (props: ListProps) => (
       <TextInput source="company" validate={validateCompany} />
       <TextInput source="address" validate={validateAddress} />
       <TextInput source="other_address" validate={validateOtherAddress} />
-      <NumberInput source="postal_code" validate={validatePostalCode} />
+      <TextInput source="postal_code" validate={validatePostalCode} />
       <TextInput source="city" validate={validateCity} />
       <TextInput source="email" validate={validateEmail} />
       <TextInput source="mobile_phone" validate={validateMobilePhone} />
