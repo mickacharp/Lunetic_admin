@@ -13,7 +13,11 @@ import { WishlistList } from "./WishlistList";
 import { NewsList } from "./NewsList";
 import { OpeningHourList } from "./OpeningHourList";
 import { CollectionList } from "./CollectionList";
+import { CollectionEdit } from "./CollectionEdit";
+import { CollectionCreate } from "./CollectionCreate";
 import { ColorList } from "./ColorList";
+import { ColorEdit } from "./ColorEdit";
+import { ColorCreate } from "./ColorCreate";
 
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
@@ -47,8 +51,18 @@ const App = () => (
     <Resource name="wishlists" list={WishlistList} edit={EditGuesser} />
     <Resource name="news" list={NewsList} edit={EditGuesser} />
     <Resource name="openinghours" list={OpeningHourList} edit={EditGuesser} />
-    <Resource name="collections" list={CollectionList} edit={EditGuesser} />
-    <Resource name="colors" list={ColorList} edit={EditGuesser} />
+    <Resource
+      name="collections"
+      list={CollectionList}
+      edit={CollectionEdit}
+      create={CollectionCreate}
+    />
+    <Resource
+      name="colors"
+      list={ColorList}
+      edit={ColorEdit}
+      create={ColorCreate}
+    />
   </Admin>
 );
 
