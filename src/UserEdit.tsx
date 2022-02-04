@@ -4,8 +4,8 @@ import {
   NumberInput,
   SimpleForm,
   TextInput,
-} from 'react-admin';
-import { PostEditActions } from './PostEditActions';
+} from "react-admin";
+import { PostEditActions } from "./PostEditActions";
 
 const UserEdit = (props: ListProps) => (
   <Edit {...props} actions={<PostEditActions />}>
