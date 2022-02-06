@@ -4,16 +4,24 @@ import {
   Datagrid,
   NumberField,
   TextField,
-  DateField,
+  ReferenceField,
 } from "react-admin";
 
 export const WishlistList = (props: ListProps) => (
   <List {...props}>
-    <Datagrid rowClick="edit">
+    <Datagrid>
       <NumberField source="id_wishlist" />
       <TextField source="name" />
-      <DateField source="date" />
-      <NumberField source="id_optician" />
+      <ReferenceField
+        label="Opticien"
+        source="id_optician"
+        reference="opticians"
+      >
+        <>
+          <TextField source="firstname" /> <TextField source="lastname" />,{" "}
+          <TextField source="company" />
+        </>
+      </ReferenceField>
     </Datagrid>
   </List>
 );

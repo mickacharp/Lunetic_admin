@@ -66,7 +66,7 @@ const App = () => (
       edit={TempleEdit}
       create={TempleCreate}
     />
-    <Resource name="wishlists" list={WishlistList} edit={EditGuesser} />
+    <Resource name="wishlists" list={WishlistList} />
     <Resource name="news" list={NewsList} edit={NewsEdit} create={NewsCreate} />
     <Resource
       name="openinghours"
