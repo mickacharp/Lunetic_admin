@@ -11,6 +11,8 @@ import { OrderList } from "./OrderList";
 import { OrderEdit } from "./OrderEdit";
 import { OrderCreate } from "./OrderCreate";
 import { TempleList } from "./TempleList";
+import { TempleEdit } from "./TempleEdit";
+import { TempleCreate } from "./TempleCreate";
 import { WishlistList } from "./WishlistList";
 import { NewsList } from "./NewsList";
 import { NewsEdit } from "./NewsEdit";
@@ -58,7 +60,12 @@ const App = () => (
       edit={OrderEdit}
       create={OrderCreate}
     />
-    <Resource name="temples" list={TempleList} edit={EditGuesser} />
+    <Resource
+      name="temples"
+      list={TempleList}
+      edit={TempleEdit}
+      create={TempleCreate}
+    />
     <Resource name="wishlists" list={WishlistList} edit={EditGuesser} />
     <Resource name="news" list={NewsList} edit={NewsEdit} create={NewsCreate} />
     <Resource
