@@ -12,7 +12,7 @@ import {
 } from "react-admin";
 import { PostEditActions } from "./PostEditActions";
 
-const validateOpeningHour: Validator[] = [minLength(2), maxLength(45)];
+const validateOpeningHour: Validator[] = [maxLength(45)];
 const validateReference: Validator[] = [required()];
 
 export interface IOptician {
