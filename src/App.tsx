@@ -149,13 +149,13 @@ const App = () => (
       list={ModelImageList}
       edit={ModelImageEdit}
       options={{ label: "Images Montures", menuParent: "pages-images" }}
-    />
+    /> */}
     <Resource
-      name="usimages"
+      name="us-images"
       list={UsImageList}
       edit={UsImageEdit}
       options={{ label: "Images Nous", menuParent: "pages-images" }}
-    /> */}
+    />
     <Resource name="days" />
   </Admin>
 );
