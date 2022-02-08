@@ -30,6 +30,14 @@ import { ColorCreate } from "./ColorCreate";
 import { ModelTempleColorList } from "./ModelTempleColorList";
 import { ModelTempleColorEdit } from "./ModelTempleColorEdit";
 import { ModelTempleColorCreate } from "./ModelTempleColorCreate";
+import { CarouselList } from "./CarouselList";
+import { CarouselEdit } from "./CarouselEdit";
+import { ConceptImageList } from "./ConceptImageList";
+import { ConceptImageEdit } from "./ConceptImageEdit";
+import { ModelImageList } from "./ModelImageList";
+import { ModelImageEdit } from "./ModelImageEdit";
+import { UsImageList } from "./UsImageList";
+import { UsImageEdit } from "./UsImageEdit";
 
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
@@ -100,15 +108,18 @@ const App = () => (
       create={OpticianCreate}
       options={{ label: "Opticiens" }}
     />
+    {/* Creating a wishlist folder */}
     <Resource
       name="wishlist-parent"
       options={{ label: "Wishlists", isMenuParent: true }}
     />
+    {/* Creating a wishlist child */}
     <Resource
       name="wishlists"
       list={WishlistList}
       options={{ label: "Listes", menuParent: "wishlist-parent" }}
     />
+    {/* Creating a second wishlist child */}
     <Resource
       name="glasses"
       list={ModelTempleColorList}
@@ -116,6 +127,35 @@ const App = () => (
       create={ModelTempleColorCreate}
       options={{ label: "Contenu (lunettes)", menuParent: "wishlist-parent" }}
     />
+    {/* Creating a images folder */}
+    <Resource
+      name="pages-images"
+      options={{ label: "Ressources images", isMenuParent: true }}
+    />
+    <Resource
+      name="carousels"
+      list={CarouselList}
+      edit={CarouselEdit}
+      options={{ label: "Carousels (Accueil)", menuParent: "pages-images" }}
+    />
+    {/* <Resource
+      name="conceptimages"
+      list={ConceptImageList}
+      edit={ConceptImageEdit}
+      options={{ label: "Images (Concept)", menuParent: "pages-images" }}
+    />
+    <Resource
+      name="modelsimages"
+      list={ModelImageList}
+      edit={ModelImageEdit}
+      options={{ label: "Images (Montures)", menuParent: "pages-images" }}
+    />
+    <Resource
+      name="usimages"
+      list={UsImageList}
+      edit={UsImageEdit}
+      options={{ label: "Images (Nous)", menuParent: "pages-images" }}
+    /> */}
     <Resource name="days" />
   </Admin>
 );
