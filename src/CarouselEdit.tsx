@@ -12,13 +12,13 @@ export const CarouselEdit = (props: ListProps) => (
     {/* Add custom buttons in adding screen */}
     <SimpleForm>
       <NumberInput source="id_carousel" disabled />
-      <TextInput source="img_top1" />
-      <TextInput source="img_top2" />
-      <TextInput source="img_top3" />
-      <TextInput source="img_bottom1" />
-      <TextInput source="img_bottom2" />
-      <TextInput source="img_bottom3" />
-      <TextInput source="video" />
+      <TextInput source="img_top1" label="Img1 Carousel Top" />
+      <TextInput source="img_top2" label="Img2 Carousel Top" />
+      <TextInput source="video" label="Vidéo Carousel Top" />
+      <TextInput source="img_bottom1" label="Img1 Carousel Bas" />
+      <TextInput source="img_bottom2" label="Img2 Carousel Bas" />
+      <TextInput source="img_bottom3" label="Img3 Carousel Bas" />
+      <TextInput source="img_top3" label="ImgOptionnelle (indisponible)" />
     </SimpleForm>
   </Edit>
 );

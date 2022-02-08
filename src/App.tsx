@@ -136,25 +136,25 @@ const App = () => (
       name="carousels"
       list={CarouselList}
       edit={CarouselEdit}
-      options={{ label: "Carousels (Accueil)", menuParent: "pages-images" }}
+      options={{ label: "Carousels Accueil", menuParent: "pages-images" }}
     />
     {/* <Resource
       name="conceptimages"
       list={ConceptImageList}
       edit={ConceptImageEdit}
-      options={{ label: "Images (Concept)", menuParent: "pages-images" }}
+      options={{ label: "Images Concept", menuParent: "pages-images" }}
     />
     <Resource
       name="modelsimages"
       list={ModelImageList}
       edit={ModelImageEdit}
-      options={{ label: "Images (Montures)", menuParent: "pages-images" }}
+      options={{ label: "Images Montures", menuParent: "pages-images" }}
     />
     <Resource
       name="usimages"
       list={UsImageList}
       edit={UsImageEdit}
-      options={{ label: "Images (Nous)", menuParent: "pages-images" }}
+      options={{ label: "Images Nous", menuParent: "pages-images" }}
     /> */}
     <Resource name="days" />
   </Admin>
