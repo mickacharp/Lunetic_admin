@@ -22,14 +22,11 @@ export const OpticianList = (props: ListProps) => (
       <EmailField source="email" label="Email" />
       <TextField source="mobile_phone" label="Tél mobile" />
       <TextField source="home_phone" label="Tél fixe" />
-      <TextField source="password" label="Mot de passe" />
       <TextField source="website" label="Site web" />
       <TextField source="finess_code" label="FINESS" />
       <TextField source="siret" label="SIRET" />
       <TextField source="vat_number" label="N° TVA" />
       <TextField source="link_picture" label="Lien Photo" />
-      <TextField source="lat" label="Latitude" />
-      <TextField source="lng" label="Longitude" />
       <BooleanNumField source="admin" />
     </Datagrid>
   </List>
