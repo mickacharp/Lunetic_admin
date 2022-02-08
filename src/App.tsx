@@ -138,13 +138,13 @@ const App = () => (
       edit={CarouselEdit}
       options={{ label: "Carousels Accueil", menuParent: "pages-images" }}
     />
-    {/* <Resource
-      name="conceptimages"
+    <Resource
+      name="concept-images"
       list={ConceptImageList}
       edit={ConceptImageEdit}
       options={{ label: "Images Concept", menuParent: "pages-images" }}
     />
-    <Resource
+    {/* <Resource
       name="modelsimages"
       list={ModelImageList}
       edit={ModelImageEdit}

@@ -9,7 +9,7 @@ export const ConceptImageList = (props: ListProps) => (
       <TextField source="img2" />
       <TextField source="left_img3" />
       <TextField source="right_img3" />
-      <TextField source="video" />
+      <TextField source="video" label="VidéoOptionnelle (indisponible)" />
     </Datagrid>
   </List>
 );
