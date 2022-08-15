@@ -50,22 +50,22 @@ export const OpticianCreate = (props: ListProps) => (
     {...props}
   >
     <SimpleForm warnWhenUnsavedChanges>
-      <TextInput source="firstname" validate={validateFirstname} />
-      <TextInput source="lastname" validate={validateLastname} />
-      <TextInput source="company" validate={validateCompany} />
-      <TextInput source="address" validate={validateAddress} />
-      <TextInput source="other_address" validate={validateOtherAddress} />
-      <TextInput source="postal_code" validate={validatePostalCode} />
-      <TextInput source="city" validate={validateCity} />
-      <TextInput source="email" validate={validateEmail} />
-      <TextInput source="mobile_phone" validate={validateMobilePhone} />
-      <TextInput source="password" validate={validatePassword} />
-      <TextInput source="website" validate={validateWebsite} />
-      <TextInput source="home_phone" validate={validateHomePhone} />
-      <TextInput source="finess_code" validate={validateFinessCode} />
-      <TextInput source="siret" validate={validateSiret} />
-      <TextInput source="vat_number" validate={validateVatNumber} />
-      <TextInput source="link_picture" validate={validateLinkPicture} />
+      <TextInput source="firstname" validate={validateFirstname} label="Prénom" />
+      <TextInput source="lastname" validate={validateLastname} label="Nom" />
+      <TextInput source="company" validate={validateCompany} label="Boutique/Société" />
+      <TextInput source="address" validate={validateAddress} label="Adresse (numéro et rue)" />
+      <TextInput source="other_address" validate={validateOtherAddress} label="Autre adresse" />
+      <TextInput source="postal_code" validate={validatePostalCode} label="Code postal" />
+      <TextInput source="city" validate={validateCity} label="Ville" />
+      <TextInput source="email" validate={validateEmail} label="Email" />
+      <TextInput source="mobile_phone" validate={validateMobilePhone} label="Tél. mobile" />
+      <TextInput source="password" validate={validatePassword} label="Mot de passe" />
+      <TextInput source="website" validate={validateWebsite} label="Site web" />
+      <TextInput source="home_phone" validate={validateHomePhone} label="Tél. fixe" />
+      <TextInput source="finess_code" validate={validateFinessCode} label="Code FINESS" />
+      <TextInput source="siret" validate={validateSiret} label="N° SIRET" />
+      <TextInput source="vat_number" validate={validateVatNumber} label="N° TVA" />
+      <TextInput source="link_picture" validate={validateLinkPicture} label="Lien vers la photo" />
       <SelectInput
         label="Droits Administrateur ?"
         source="admin"
