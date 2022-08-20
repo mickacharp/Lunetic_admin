@@ -6,12 +6,12 @@ export const ConceptImageEdit = (props: ListProps) => (
     {/* Add custom buttons in adding screen */}
     <SimpleForm>
       <NumberInput source="id_concept_image" disabled />
-      <TextInput source="main_img" />
-      <TextInput source="img1" />
-      <TextInput source="img2" />
-      <TextInput source="left_img3" />
-      <TextInput source="right_img3" />
-      <TextInput source="video" />
+      <TextInput source="main_img" fullWidth multiline />
+      <TextInput source="img1" fullWidth multiline />
+      <TextInput source="img2" fullWidth multiline />
+      <TextInput source="left_img3" fullWidth multiline />
+      <TextInput source="right_img3" fullWidth multiline />
+      <TextInput source="video" fullWidth multiline />
     </SimpleForm>
   </Edit>
 );

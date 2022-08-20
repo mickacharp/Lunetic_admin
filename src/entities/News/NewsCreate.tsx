@@ -26,10 +26,10 @@ export const NewsCreate = (props: ListProps) => (
     {...props}
   >
     <SimpleForm warnWhenUnsavedChanges>
-      <TextInput source="title" validate={validateTitle} />
-      <TextInput source="subtitle" validate={validateSubtitle} />
-      <TextInput source="text" validate={validateText} />
-      <TextInput source="link_picture" validate={validateLinkPicture} />
+      <TextInput source="title" validate={validateTitle} fullWidth multiline />
+      <TextInput source="subtitle" validate={validateSubtitle} fullWidth multiline />
+      <TextInput source="text" validate={validateText} fullWidth multiline />
+      <TextInput source="link_picture" validate={validateLinkPicture} fullWidth multiline />
     </SimpleForm>
   </Create>
 );

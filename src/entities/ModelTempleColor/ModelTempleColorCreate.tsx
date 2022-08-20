@@ -39,6 +39,7 @@ export const ModelTempleColorCreate = (props: ListProps) => (
         reference="models"
         label="Monture"
         validate={validateReference}
+        fullWidth
       >
         {/* Allows to display a dropdown list that will show directly the "name" of the models instead of their "id_model" thanks to the optionRenderer function defined above */}
         <SelectInput optionText={optionRendererModel} />
@@ -48,6 +49,7 @@ export const ModelTempleColorCreate = (props: ListProps) => (
         reference="colors"
         label="Couleur"
         validate={validateReference}
+        fullWidth
       >
         <SelectInput optionText={optionRendererColor} />
       </ReferenceInput>
@@ -56,6 +58,7 @@ export const ModelTempleColorCreate = (props: ListProps) => (
         reference="wishlists"
         label="Nom Wishlist"
         validate={validateReference}
+        fullWidth
       >
         <SelectInput optionText={optionRendererWishlist} />
       </ReferenceInput>

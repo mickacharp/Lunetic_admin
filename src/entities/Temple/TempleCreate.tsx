@@ -27,8 +27,14 @@ export const TempleCreate = (props: ListProps) => (
     {...props}
   >
     <SimpleForm warnWhenUnsavedChanges>
-      <TextInput source="name" validate={validateName} label="Nom" />
-      <ReferenceInput source="id_collection" reference="collections" label="Collection">
+      <TextInput source="name" validate={validateName} label="Nom" fullWidth multiline />
+      <ReferenceInput
+        source="id_collection"
+        reference="collections"
+        label="Collection"
+        fullWidth
+        multiline
+      >
         {/* Allows to display a dropdown list that will show directly the "name" of the collections instead of their "id_collection" thanks to the optionRenderer function defined above */}
         <SelectInput optionText={optionRenderer} />
       </ReferenceInput>

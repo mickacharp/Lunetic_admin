@@ -6,7 +6,7 @@ export const CollectionEdit = (props: ListProps) => (
     {/* Add custom buttons in adding screen */}
     <SimpleForm>
       <NumberInput source="id_collection" disabled />
-      <TextInput source="name" />
+      <TextInput source="name" fullWidth />
     </SimpleForm>
   </Edit>
 );

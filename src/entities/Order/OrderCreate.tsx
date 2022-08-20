@@ -34,13 +34,18 @@ export const OrderCreate = (props: ListProps) => (
     {...props}
   >
     <SimpleForm warnWhenUnsavedChanges>
-      <ReferenceInput source="id_optician" reference="opticians" validate={validateReference}>
+      <ReferenceInput
+        source="id_optician"
+        reference="opticians"
+        validate={validateReference}
+        fullWidth
+      >
         {/* Allows to display a dropdown list that will show directly the name of the opticians instead of their "id_optician" thanks to the optionRenderer function defined above */}
         <SelectInput optionText={optionRendererOptician} />
       </ReferenceInput>
-      <TextInput source="link_pdf" validate={validateLinkPdf} />
-      <TextInput source="order_number" validate={validateOrderNumber} />
-      <DateInput source="date" validate={validateDate} />
+      <TextInput source="link_pdf" validate={validateLinkPdf} fullWidth />
+      <TextInput source="order_number" validate={validateOrderNumber} fullWidth />
+      <DateInput source="date" validate={validateDate} fullWidth />
     </SimpleForm>
   </Create>
 );

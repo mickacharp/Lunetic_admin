@@ -20,8 +20,14 @@ export const TempleEdit = (props: ListProps) => (
     {/* Add custom buttons in adding screen */}
     <SimpleForm>
       <NumberInput source="id_temple" disabled />
-      <TextInput source="name" label="Nom" />
-      <ReferenceInput source="id_collection" reference="collections" label="Collection">
+      <TextInput source="name" label="Nom" fullWidth multiline />
+      <ReferenceInput
+        source="id_collection"
+        reference="collections"
+        label="Collection"
+        fullWidth
+        multiline
+      >
         {/* Allows to display a dropdown list that will show directly the "name" of the collections instead of their "id_collection" thanks to the optionRenderer function defined above */}
         <SelectInput optionText={optionRenderer} />
       </ReferenceInput>

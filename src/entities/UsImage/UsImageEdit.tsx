@@ -6,9 +6,9 @@ export const UsImageEdit = (props: ListProps) => (
     {/* Add custom buttons in adding screen */}
     <SimpleForm>
       <NumberInput source="id_us_image" disabled />
-      <TextInput source="main_img" label="Image Principale" />
-      <TextInput source="middle_img" label="Image Milieu" />
-      <TextInput source="partners_img" label="Image Partenaires" />
+      <TextInput source="main_img" label="Image Principale" fullWidth multiline />
+      <TextInput source="middle_img" label="Image Milieu" fullWidth multiline />
+      <TextInput source="partners_img" label="Image Partenaires" fullWidth multiline />
     </SimpleForm>
   </Edit>
 );

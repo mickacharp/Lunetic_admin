@@ -6,10 +6,10 @@ export const NewsEdit = (props: ListProps) => (
     {/* Add custom buttons in adding screen */}
     <SimpleForm>
       <NumberInput source="id_news" disabled />
-      <TextInput source="title" />
-      <TextInput source="subtitle" />
-      <TextInput source="text" />
-      <TextInput source="link_picture" />
+      <TextInput source="title" fullWidth multiline />
+      <TextInput source="subtitle" fullWidth multiline />
+      <TextInput source="text" fullWidth multiline />
+      <TextInput source="link_picture" fullWidth multiline />
     </SimpleForm>
   </Edit>
 );

@@ -6,20 +6,20 @@ export const ModelImageEdit = (props: ListProps) => (
     {/* Add custom buttons in adding screen */}
     <SimpleForm>
       <NumberInput source="id_models_image" disabled />
-      <TextInput source="main_img1" />
-      <TextInput source="main_img2" />
-      <TextInput source="main_img3" />
-      <TextInput source="main_img4" />
-      <TextInput source="sidetitle_img1" />
-      <TextInput source="sidetitle_img2" />
-      <TextInput source="page_img1" />
-      <TextInput source="page_img2" />
-      <TextInput source="middle_img1" />
-      <TextInput source="middle_img2" />
-      <TextInput source="main_bottom_img" />
-      <TextInput source="bottom_img1" />
-      <TextInput source="bottom_img2" />
-      <TextInput source="bottom_img3" />
+      <TextInput source="main_img1" fullWidth multiline />
+      <TextInput source="main_img2" fullWidth multiline />
+      <TextInput source="main_img3" fullWidth multiline />
+      <TextInput source="main_img4" fullWidth multiline />
+      <TextInput source="sidetitle_img1" fullWidth multiline />
+      <TextInput source="sidetitle_img2" fullWidth multiline />
+      <TextInput source="page_img1" fullWidth multiline />
+      <TextInput source="page_img2" fullWidth multiline />
+      <TextInput source="middle_img1" fullWidth multiline />
+      <TextInput source="middle_img2" fullWidth multiline />
+      <TextInput source="main_bottom_img" fullWidth multiline />
+      <TextInput source="bottom_img1" fullWidth multiline />
+      <TextInput source="bottom_img2" fullWidth multiline />
+      <TextInput source="bottom_img3" fullWidth multiline />
     </SimpleForm>
   </Edit>
 );

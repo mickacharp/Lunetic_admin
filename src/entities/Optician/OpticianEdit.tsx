@@ -6,22 +6,22 @@ export const OpticianEdit = (props: ListProps) => (
     {/* Add custom buttons in adding screen */}
     <SimpleForm>
       <NumberInput source="id_optician" disabled />
-      <TextInput source="firstname" />
-      <TextInput source="lastname" />
-      <TextInput source="company" />
-      <TextInput source="address" />
-      <TextInput source="other_address" />
-      <TextInput source="postal_code" />
-      <TextInput source="city" />
-      <TextInput source="email" />
-      <TextInput source="mobile_phone" />
-      <TextInput source="password" />
-      <TextInput source="website" />
-      <TextInput source="home_phone" />
-      <TextInput source="finess_code" />
-      <TextInput source="siret" />
-      <TextInput source="vat_number" />
-      <TextInput source="link_picture" />
+      <TextInput source="firstname" fullWidth multiline />
+      <TextInput source="lastname" fullWidth multiline />
+      <TextInput source="company" fullWidth multiline />
+      <TextInput source="address" fullWidth multiline />
+      <TextInput source="other_address" fullWidth multiline />
+      <TextInput source="postal_code" fullWidth multiline />
+      <TextInput source="city" fullWidth multiline />
+      <TextInput source="email" fullWidth multiline />
+      <TextInput source="mobile_phone" fullWidth multiline />
+      <TextInput source="password" fullWidth multiline />
+      <TextInput source="website" fullWidth multiline />
+      <TextInput source="home_phone" fullWidth multiline />
+      <TextInput source="finess_code" fullWidth multiline />
+      <TextInput source="siret" fullWidth multiline />
+      <TextInput source="vat_number" fullWidth multiline />
+      <TextInput source="link_picture" fullWidth multiline />
       <SelectInput
         label="Droits Administrateur ?"
         source="admin"
@@ -29,6 +29,7 @@ export const OpticianEdit = (props: ListProps) => (
           { id: "0", name: "Non" },
           { id: "1", name: "Oui" },
         ]}
+        fullWidth
       />
     </SimpleForm>
   </Edit>

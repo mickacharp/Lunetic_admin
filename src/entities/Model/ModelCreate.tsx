@@ -33,17 +33,17 @@ export const ModelCreate = (props: ListProps) => (
     {...props}
   >
     <SimpleForm warnWhenUnsavedChanges>
-      <TextInput source="name" validate={validateName} />
+      <TextInput source="name" validate={validateName} fullWidth multiline />
       <ReferenceInput source="id_collection" reference="collections">
         {/* Allows to display a dropdown list that will show directly the "name" of the collections instead of their "id_collection" thanks to the optionRenderer function defined above */}
         <SelectInput optionText={optionRenderer} />
       </ReferenceInput>
-      <TextInput source="text" validate={validateText} />
-      <TextInput source="main_img" validate={validateMainImg} />
-      <TextInput source="img_2" validate={validateImg2} />
-      <TextInput source="img_3" validate={validateImg3} />
-      <TextInput source="img_4" validate={validateImg4} />
-      <TextInput source="img_5" validate={validateImg5} />
+      <TextInput source="text" validate={validateText} fullWidth multiline />
+      <TextInput source="main_img" validate={validateMainImg} fullWidth multiline />
+      <TextInput source="img_2" validate={validateImg2} fullWidth multiline />
+      <TextInput source="img_3" validate={validateImg3} fullWidth multiline />
+      <TextInput source="img_4" validate={validateImg4} fullWidth multiline />
+      <TextInput source="img_5" validate={validateImg5} fullWidth multiline />
     </SimpleForm>
   </Create>
 );

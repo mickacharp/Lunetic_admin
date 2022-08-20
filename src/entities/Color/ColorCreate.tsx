@@ -19,7 +19,7 @@ export const ColorCreate = (props: ListProps) => (
     {...props}
   >
     <SimpleForm warnWhenUnsavedChanges>
-      <TextInput source="name" validate={validateName} />
+      <TextInput source="name" validate={validateName} fullWidth />
     </SimpleForm>
   </Create>
 );
