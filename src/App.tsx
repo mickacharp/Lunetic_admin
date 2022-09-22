@@ -1,43 +1,45 @@
 import { Admin, Resource, fetchUtils, Layout } from "react-admin";
 import simpleRestProvider from "ra-data-simple-rest";
 import TreeMenu from "@bb-tech/ra-treemenu";
-import authProvider from "./authProvider";
-import { ModelList } from "./ModelList";
-import { ModelEdit } from "./ModelEdit";
-import { ModelCreate } from "./ModelCreate";
-import { OpticianList } from "./OpticianList";
-import { OpticianEdit } from "./OpticianEdit";
-import { OpticianCreate } from "./OpticianCreate";
-import { OrderList } from "./OrderList";
-import { OrderEdit } from "./OrderEdit";
-import { OrderCreate } from "./OrderCreate";
-import { TempleList } from "./TempleList";
-import { TempleEdit } from "./TempleEdit";
-import { TempleCreate } from "./TempleCreate";
-import { WishlistList } from "./WishlistList";
-import { NewsList } from "./NewsList";
-import { NewsEdit } from "./NewsEdit";
-import { NewsCreate } from "./NewsCreate";
-import { OpeningHourList } from "./OpeningHourList";
-import { OpeningHourEdit } from "./OpeningHourEdit";
-import { OpeningHourCreate } from "./OpeningHourCreate";
-import { CollectionList } from "./CollectionList";
-import { CollectionEdit } from "./CollectionEdit";
-import { CollectionCreate } from "./CollectionCreate";
-import { ColorList } from "./ColorList";
-import { ColorEdit } from "./ColorEdit";
-import { ColorCreate } from "./ColorCreate";
-import { ModelTempleColorList } from "./ModelTempleColorList";
-import { ModelTempleColorEdit } from "./ModelTempleColorEdit";
-import { ModelTempleColorCreate } from "./ModelTempleColorCreate";
-import { CarouselList } from "./CarouselList";
-import { CarouselEdit } from "./CarouselEdit";
-import { ConceptImageList } from "./ConceptImageList";
-import { ConceptImageEdit } from "./ConceptImageEdit";
-import { ModelImageList } from "./ModelImageList";
-import { ModelImageEdit } from "./ModelImageEdit";
-import { UsImageList } from "./UsImageList";
-import { UsImageEdit } from "./UsImageEdit";
+import authProvider from "./helpers/authProvider";
+
+// Entities imports
+import { ModelList } from "./entities/Model/ModelList";
+import { ModelEdit } from "./entities/Model/ModelEdit";
+import { ModelCreate } from "./entities/Model/ModelCreate";
+import { OpticianList } from "./entities/Optician/OpticianList";
+import { OpticianEdit } from "./entities/Optician/OpticianEdit";
+import { OpticianCreate } from "./entities/Optician/OpticianCreate";
+import { OrderList } from "./entities/Order/OrderList";
+import { OrderEdit } from "./entities/Order/OrderEdit";
+import { OrderCreate } from "./entities/Order/OrderCreate";
+import { TempleList } from "./entities/Temple/TempleList";
+import { TempleEdit } from "./entities/Temple/TempleEdit";
+import { TempleCreate } from "./entities/Temple/TempleCreate";
+import { WishlistList } from "./entities/Wishlist/WishlistList";
+import { NewsList } from "./entities/News/NewsList";
+import { NewsEdit } from "./entities/News/NewsEdit";
+import { NewsCreate } from "./entities/News/NewsCreate";
+import { OpeningHourList } from "./entities/OpeningHour/OpeningHourList";
+import { OpeningHourEdit } from "./entities/OpeningHour/OpeningHourEdit";
+import { OpeningHourCreate } from "./entities/OpeningHour/OpeningHourCreate";
+import { CollectionList } from "./entities/Collection/CollectionList";
+import { CollectionEdit } from "./entities/Collection/CollectionEdit";
+import { CollectionCreate } from "./entities/Collection/CollectionCreate";
+import { ColorList } from "./entities/Color/ColorList";
+import { ColorEdit } from "./entities/Color/ColorEdit";
+import { ColorCreate } from "./entities/Color/ColorCreate";
+import { ModelTempleColorList } from "./entities/ModelTempleColor/ModelTempleColorList";
+import { ModelTempleColorEdit } from "./entities/ModelTempleColor/ModelTempleColorEdit";
+import { ModelTempleColorCreate } from "./entities/ModelTempleColor/ModelTempleColorCreate";
+import { CarouselList } from "./entities/Carousel/CarouselList";
+import { CarouselEdit } from "./entities/Carousel/CarouselEdit";
+import { ConceptImageList } from "./entities/ConceptImage/ConceptImageList";
+import { ConceptImageEdit } from "./entities/ConceptImage/ConceptImageEdit";
+import { ModelImageList } from "./entities/ModelImage/ModelImageList";
+import { ModelImageEdit } from "./entities/ModelImage/ModelImageEdit";
+import { UsImageList } from "./entities/UsImage/UsImageList";
+import { UsImageEdit } from "./entities/UsImage/UsImageEdit";
 
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
@@ -48,10 +50,7 @@ const httpClient = (url: string, options: any = {}) => {
   return fetchUtils.fetchJson(url, options);
 };
 
-const dataProvider = simpleRestProvider(
-  "http://localhost:4000/api",
-  httpClient
-);
+const dataProvider = simpleRestProvider("http://localhost:4000/api", httpClient);
 const App = () => (
   <Admin
     authProvider={authProvider}
@@ -109,10 +108,7 @@ const App = () => (
       options={{ label: "Opticiens" }}
     />
     {/* Creating a wishlist folder */}
-    <Resource
-      name="wishlist-parent"
-      options={{ label: "Wishlists", isMenuParent: true }}
-    />
+    <Resource name="wishlist-parent" options={{ label: "Wishlists", isMenuParent: true }} />
     {/* Creating a wishlist child */}
     <Resource
       name="wishlists"
@@ -128,10 +124,7 @@ const App = () => (
       options={{ label: "Contenu (lunettes)", menuParent: "wishlist-parent" }}
     />
     {/* Creating a images folder */}
-    <Resource
-      name="pages-images"
-      options={{ label: "Ressources images", isMenuParent: true }}
-    />
+    <Resource name="pages-images" options={{ label: "Ressources images", isMenuParent: true }} />
     <Resource
       name="carousels"
       list={CarouselList}
